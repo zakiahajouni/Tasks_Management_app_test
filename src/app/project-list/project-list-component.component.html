@@ -1,0 +1,24 @@
+<div class="container">
+  <button class="mb-4 mt-4 btn btn-success" routerLink="/add-project" >Add project</button>
+
+  <div class="card shadow mb-4">
+    <div class="card-body">
+     <table class="table table-striped">
+        <tr> <th>Id</th><th>Name</th> <th>Description</th>   </tr>
+              <tbody *ngFor="let project of projects">
+
+                       <tr >
+                          <td>{{project.id}}</td>
+                          <td>{{project.name}}</td>
+                          <td>{{project.description}}</td>
+                          <td><a class="btn btn-success" [routerLink]="['/projects',project.id]">Details</a></td>
+                          <td><a class="btn btn-danger "  (click)="deleteProject(project)">Delete</a></td>
+                          <td><a class="btn btn-primary">Tasks</a></td>
+                          <td><a class="btn btn-info " >Add task</a></td>
+
+                        </tr>
+               </tbody>
+    </table>
+    </div>
+  </div>
+</div>

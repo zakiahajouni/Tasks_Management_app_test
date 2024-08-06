@@ -1,0 +1,28 @@
+<div class="container">
+  <div>
+    <h2>Project details :</h2>
+  </div>
+       <table >
+           <div class="col-sm-2 col-md-2 col-lg-2 mb-2">
+             <label >ID  </label>
+             <input   type="text"  [(ngModel)]="currentProject.id"
+
+                 name="id" class="form-control" readonly>
+            </div>
+
+           <div class="col-sm-12 col-md-4 col-lg-auto mb-2" >
+             <label >Name</label>
+             <input  type="text"[(ngModel)]= "currentProject.name"
+                 name="name" class="form-control" readonly>
+           </div>
+
+           <div class="col-sm-12 col-md-12 col-lg-12 mb-2">
+             <label >Description</label>
+         <textarea type="text"   [(ngModel)]= "currentProject.description"
+
+                 name="description" class="form-control" readonly> </textarea>
+           </div>
+
+
+       </table>
+</div>
